@@ -2,6 +2,7 @@
 <html>
 <head>
     <link href="../bower_components/polymer/polymer.html" rel="import">
+    <link href="../bower_components/polymer/" rel="import">
 
     <!-- Element Imports -->
     <link href="../bower_components/paper-drawer-panel/paper-drawer-panel.html" rel="import">
@@ -9,11 +10,24 @@
     <link href="../bower_components/paper-toolbar/paper-toolbar.html" rel="import">
     <link href="../bower_components/paper-icon-button/paper-icon-button.html" rel="import">
     <link href="../bower_components/iron-icons/iron-icons.html" rel="import">
+
+    <script type="text/javascript" src="../js/helper.js"></script>
 </head>
 
 <dom-module id="main_page-element">
     <style>
         /* CSS rules for your element */
+        .bg {
+            background-image: url("../img/bg/hintergrund-neutral.jpg");
+        }
+
+        .test{
+            background-color: rgba(255,255,255,0.2);
+            text-align: center;
+            padding-right: 5%;
+            color: white;
+        }
+
     </style>
     <template>
         <paper-drawer-panel>
@@ -23,12 +37,14 @@
                 </paper-toolbar>
                 <div> Drawer content... </div>
             </paper-header-panel>
-            <paper-header-panel main>
-                <paper-toolbar>
+            <paper-header-panel class="bg" mode="waterfall" main>
+                <paper-toolbar class="test">
                     <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-                    <div>Title</div>
+                    <div class="title">Futter und Wasser</div>
                 </paper-toolbar>
-                <div> Main content... </div>
+                    <div> one  </div>
+                    <div> two </div>
+                    <div> three </div>
             </paper-header-panel>
         </paper-drawer-panel>
     </template>
@@ -44,3 +60,4 @@
     }
     });
 </script>
+

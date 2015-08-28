@@ -1,0 +1,21 @@
+{
+  "name": "AnimalShelter",
+  "version": "0.1.0",
+  "homepage": "https://github.com/brainjay/animalshelter",
+  "authors": [
+    "brainjay <brainjay@gmail.com>"
+  ],
+  "description": "Mobile web application for the animal shelter in Ravensburg",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-card": "PolymerElements/paper-card#~1.0.3",
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
