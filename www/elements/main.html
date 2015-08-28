@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../bower_components/polymer/polymer.html" rel="import">
+
+    <!-- Element Imports -->
+    <link href="../bower_components/paper-drawer-panel/paper-drawer-panel.html" rel="import">
+    <link href="../bower_components/paper-header-panel/paper-header-panel.html" rel="import">
+    <link href="../bower_components/paper-toolbar/paper-toolbar.html" rel="import">
+    <link href="../bower_components/paper-icon-button/paper-icon-button.html" rel="import">
+    <link href="../bower_components/iron-icons/iron-icons.html" rel="import">
+</head>
+
+<dom-module id="main_page-element">
+    <style>
+        /* CSS rules for your element */
+    </style>
+    <template>
+        <paper-drawer-panel>
+            <paper-header-panel drawer>
+                <paper-toolbar>
+                    <div>Application</div>
+                </paper-toolbar>
+                <div> Drawer content... </div>
+            </paper-header-panel>
+            <paper-header-panel main>
+                <paper-toolbar>
+                    <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <div>Title</div>
+                </paper-toolbar>
+                <div> Main content... </div>
+            </paper-header-panel>
+        </paper-drawer-panel>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+                is: "main_page-element",
+                properties: {
+
+            },
+            ready: function(e){
+                console.log("is ready!");
+    }
+    });
+</script>
