@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
+    "iron-image": "PolymerElements/iron-image#~1.0.2",
     "paper-card": "PolymerElements/paper-card#~1.0.3",
     "polymer": "Polymer/polymer#^1.0.0"
   }
