@@ -9,7 +9,9 @@
     <link href="../bower_components/paper-header-panel/paper-header-panel.html" rel="import">
     <link href="../bower_components/paper-toolbar/paper-toolbar.html" rel="import">
     <link href="../bower_components/paper-icon-button/paper-icon-button.html" rel="import">
+    <link href="../bower_components/paper-card/paper-card.html" rel="import">
     <link href="../bower_components/iron-icons/iron-icons.html" rel="import">
+    <link href="../bower_components/iron-image/iron-image.html" rel="import">
 
     <script type="text/javascript" src="../js/helper.js"></script>
 </head>
@@ -21,11 +23,80 @@
             background-image: url("../img/bg/hintergrund-neutral.jpg");
         }
 
-        .test{
+        .header-title{
             background-color: rgba(255,255,255,0.2);
             text-align: center;
             padding-right: 5%;
             color: white;
+        }
+
+        .sized {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* CSS Hack*/
+
+        ul.rig {
+            list-style: none;
+            font-size: 0px;
+            margin-left: -2.5%; /* should match li left margin */
+        }
+        ul.rig li {
+            display: inline-block;
+            padding: 10px;
+            margin: 0 0 2.5% 2.5%;
+            background: #fff;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            font-size: 1rem;
+            vertical-align: top;
+            box-shadow: 0 0 5px #ddd;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        ul.rig li img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 0 10px;
+        }
+        ul.rig li h3 {
+            margin: 0 0 5px;
+        }
+        ul.rig li p {
+            font-size: .9em;
+            line-height: 1.5em;
+            color: #999;
+        }
+        /* class for 2 columns */
+        ul.rig.columns-2 li {
+            width: 47.5%; /* this value + 2.5 should = 50% */
+        }
+        /* class for 3 columns */
+        ul.rig.columns-3 li {
+            width: 30.83%; /* this value + 2.5 should = 33% */
+        }
+        /* class for 4 columns */
+        ul.rig.columns-4 li {
+            width: 22.5%; /* this value + 2.5 should = 25% */
+        }
+
+        @media (max-width: 480px) {
+            ul.grid-nav li {
+                display: block;
+                margin: 0 0 5px;
+            }
+            ul.grid-nav li a {
+                display: block;
+            }
+            ul.rig {
+                margin-left: 0;
+            }
+            ul.rig li {
+                width: 100% !important; /* over-ride all li styles */
+                margin: 0 0 20px;
+            }
         }
 
     </style>
@@ -38,13 +109,33 @@
                 <div> Drawer content... </div>
             </paper-header-panel>
             <paper-header-panel class="bg" mode="waterfall" main>
-                <paper-toolbar class="test">
+                <paper-toolbar class="header-title">
                     <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-                    <div class="title">Futter und Wasser</div>
+                    <div class="title">Menu</div>
                 </paper-toolbar>
-                    <div> one  </div>
-                    <div> two </div>
-                    <div> three </div>
+
+                <div class="horizontal layout">
+
+
+
+                <iron-image class="sized gray" sizing="contain" src="../img/menu/schenken-und-spenden.png" role="img" style="background-image: url(../img/menu/schenken-und-spenden.png); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat;">
+
+                    <img id="img" role="none" class="style-scope iron-image" hidden="">
+                    <div id="placeholder" class="style-scope iron-image" hidden="" style="background-size: contain; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+
+
+                </iron-image>
+
+
+                <iron-image class="sized gray" sizing="contain" src="../img/menu/tierheimtiere.png" role="img" style="background-image: url(../img/menu/tierheimtiere.png); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat;">
+
+                    <img id="img" role="none" class="style-scope iron-image" hidden="">
+                    <div id="placeholder" class="style-scope iron-image" hidden="" style="background-size: contain; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+
+
+                </iron-image>
+                </div>
+
             </paper-header-panel>
         </paper-drawer-panel>
     </template>
